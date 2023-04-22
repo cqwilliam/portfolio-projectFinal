@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,400;1,900&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+  scroll-padding-top: 60px;
+}
+
+.top_bar {
+  position: sticky;
+  top: 0;
+  background-color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: cornsilk;
+  z-index: 1;
+  padding: 0 15px;
+  height: 70px;
+}
+
+.nav {
+  position: absolute;
+  top: 70px;
+  left: -100%;
+  width: 200px;
+  height: calc(100vh - 70px);
+  background: rgba(0, 0, 0, 0.8);
+  transition: left 0.5s;
+}
+
+.show {
+  left: 0;
+}
+
+.burger_menu {
+  height: 50px;
+  filter: invert(1);
+  cursor: pointer;
+}
+
+.nav_items {
+  list-style: none;
+  /* display: flex; */
+  gap: 30px;
+}
+
+.nav_item {
+  position: relative;
+  float: left;
+  padding: 20px 0;
+}
+
+.nav_link {
+  font-size: 20px;
+  display: block;
+  color: cornsilk;
+  text-decoration: none;
+}
+
+.nav_link:hover {
+  border-bottom: 1px solid cornsilk;
+  transform: scale(1.1);
+  border-radius: 2px;
+}
+
+/* Parte del Cuerpo */
+
+.header {
+  background-image: url(/banner.png);
+  background-repeat: repeat-x;
+  padding: 70px 24px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.present {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 600px;
+  background: cornsilk;
+  color: #222;
+}
+
+.info {
+  padding: 30px;
+  grid-column-end: span 2;
+}
+
+.social_network {
+  background-color: #222;
+  grid-column-end: span 2;
+  height: 50px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.social_network_img {
+  display: block;
+  height: 100%;
+  filter: invert(1);
+}
+
+.picture {
+  object-fit: cover;
+  height: 120px;
+  width: 120px;
+  grid-column-end: span 2;
+  place-self: center;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+/* -------------------------------- */
+
+.aboutme {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 60px 18px;
+}
+
+.title_aboutme {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.contend_aboutme {
+  line-height: 2;
+}
+
+/* ------------------------------- */
+
+.experience_title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 70px;
+}
+
+.experience {
+  padding: 60px 0;
+  background-color: #f7f7f7;
+}
+
+/* ----------------------------------- */
+
+.education {
+  padding: 60px 0;
+}
+
+.education_title {
+  text-align: center;
+  margin-bottom: 70px;
+  font-size: 2rem;
+}
+
+.card_education {
+  display: grid;
+  gap: 36px;
+  justify-content: center;
+}
+
+.card {
+  border-radius: 10px;
+  filter: drop-shadow(0 5px 10px 0 #ffffff);
+  width: 280px;
+  background-color: white;
+  padding: 20px;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  transition: 0.6s ease-in;
+  color: #222;
+  border: 1px solid #2a2f3d;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: -15px;
+  background: #2a2f3d;
+  height: 100%;
+  width: 25px;
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  transition: transform 0.25s ease-out;
+}
+
+.card:hover::before {
+  transition-delay: 0.2s;
+  transform: scale(40);
+}
+
+.card:hover {
+  color: white;
+}
+
+.paragraph_education {
+  padding: 10px 0;
+}
+
+.title_card {
+  font-size: 1.2rem;
+}
+
+/* clase contacto */
+
+.contact {
+  background-size: cover;
+  color: white;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  background-image: url(https://static.vecteezy.com/ti/fotos-gratis/p1/12995640-entre-em-contato-conosco-ou-as-pessoas-da-linha-direta-de-suporte-ao-cliente-se-conectam-empresario-usando-um-laptop-e-tocando-em-icones-de-contato-de-tela-virtual-e-mail-endereco-bate-papo-ao-vivo-internet-wifi-gratis-foto.jpg);
+}
+
+.title_contact {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.form_contact {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 90%;
+  max-width: 600px;
+  padding: 30px;
+  border-radius: 5px;
+  display: grid;
+  gap: 10px;
+}
+
+.label_contact {
+  display: block;
+  padding: 10px 0;
+  font-size: 1.2rem;
+}
+
+.stuffed_contact {
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 13px;
+  border-radius: 2px;
+  font-size: 14px;
+  color: white;
+}
+
+.submit_contact {
+  width: 100%;
+  outline: none;
+  background: orange;
+  font-size: 20px;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 2px;
+  font-weight: bold;
+}
+
+.submit_contact:hover {
+  background: white;
+}
+
+@media (min-width: 640px) {
+  .picture {
+    grid-column-end: span 1;
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+    margin-top: 0;
+  }
+
+  .info {
+    grid-column-end: span 1;
+  }
+
+  .card_education {
+    display: flex;
+  }
+  .nav {
+    display: block;
+    position: static;
+    background: transparent;
+    width: auto;
+    height: auto;
+  }
+
+  .nav_items {
+    display: flex;
+  }
+
+  .burger_menu {
+    display: none;
+  }
+}
